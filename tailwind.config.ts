@@ -13,6 +13,28 @@ const config: Config = {
         'primary-dark': 'rgb(var(--color-primary-dark) / <alpha-value>)',
         secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
       },
+      keyframes: {
+        'fade-up': {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        'grow-x': {
+          '0%': { transform: 'scaleX(0)' },
+          '100%': { transform: 'scaleX(1)' },
+        },
+        ping: {
+          '75%, 100%': { transform: 'scale(2)', opacity: '0' },
+        },
+      },
+      animation: {
+        'fade-up': 'fade-up 0.6s ease-out both',
+        'fade-in': 'fade-in 0.8s ease-out both',
+        'grow-x': 'grow-x 0.8s ease-out both',
+      },
     },
   },
   plugins: [],

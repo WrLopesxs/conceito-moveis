@@ -42,6 +42,9 @@ export default function Timeline({ order }: { order: Order }) {
                 reached ? 'bg-primary text-white' : 'bg-neutral-200 text-neutral-400'
               } ${current ? 'scale-110 shadow-lg shadow-primary/30' : ''}`}
             >
+              {current && (
+                <span className="absolute inset-0 animate-ping rounded-full bg-primary/40" aria-hidden />
+              )}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

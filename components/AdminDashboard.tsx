@@ -11,7 +11,7 @@ export default function AdminDashboard({ onLogout }: { onLogout: () => void }) {
   const [showForm, setShowForm] = useState(false);
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-10">
+    <div className="mx-auto max-w-5xl animate-fade-up px-4 py-10">
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl font-bold text-neutral-900">Pedidos</h1>
@@ -50,7 +50,7 @@ export default function AdminDashboard({ onLogout }: { onLogout: () => void }) {
             {orders.map((order) => {
               const isDone = order.statusIndex === app.statuses.length - 1;
               return (
-                <tr key={order.code} className="align-middle">
+                <tr key={order.code} className="align-middle transition hover:bg-secondary/40">
                   <td className="px-4 py-3 font-semibold text-primary">{order.code}</td>
                   <td className="px-4 py-3 text-neutral-700">{order.customer}</td>
                   <td className="px-4 py-3">
